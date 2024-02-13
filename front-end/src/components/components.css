@@ -1,0 +1,73 @@
+nav {
+    color: #fff;
+    width: 200px;
+    padding-left: 20px;
+    height: 100vh;
+    background-image: linear-gradient(30deg , #0048bd, #44a7fd);
+    border-top-right-radius: 80px;
+    padding-top: 80px;
+    display: block;
+    -webkit-tap-highlight-color:transparent;
+}
+
+ul li {
+    float: left;
+    width: 100%;
+    font-size: 12px;
+    display: block;
+    color: rgb(244, 242, 242) !important;
+    text-decoration: none !important;
+    padding: 10px 10px 10px;
+}
+
+ul li a {
+    text-decoration: none !important;
+    color: white ;
+}
+li:hover {
+    background-color: #fff !important;
+    transition: .3s;
+    color:black !important;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    
+}
+ul li a :hover{
+    color:black !important;
+    outline: auto;
+}
+
+.topnav {
+    overflow: hidden;
+    display: flex;
+    background-image: linear-gradient(30deg ,#44a7fd, #0048bd );
+    height: 50px;
+    position: absolute;
+    width: 100%;
+}
+.topnav .header {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    top: 20px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .topnav .header a{ 
+    text-decoration: none !important;
+    color: white ;
+  }
+
+  .topnav .header:hover {
+    background-color: #fff !important;;
+    color: black;
+    border-radius: 20px;
+  }
+  .topnav .header a:hover {
+    background-color: #fff !important;;
+    color: black;
+  }
+
+

@@ -1,0 +1,52 @@
+version: "3.8"
+services:
+    server1:
+        build:
+            context: ./notification
+        ports:
+            - "5000:5000"
+        container_name: notification
+        depends_on:
+            - nginx
+            - mongodb
+
+    server2:
+        build:
+            context: ./payment
+        ports:
+            - "5001:5001"
+        container_name: payment
+        depends_on:
+            - nginx
+            - mongodb
+    server3:
+        build:
+            context: ./backend
+        ports:
+            - "5002:5002"
+        container_name: backend
+        depends_on:
+            - nginx
+            - mongodb
+
+    nginx:
+        restart: always
+        image: nginx:latest
+        container_name: nginx
+        volumes:
+            - "./nginx/default.conf:/etc/nginx/conf.d/default.conf"
+        ports:
+            - "8080:80"
+    mongodb:
+        image: mongo
+        ports:
+            - 27017:27017
+        environment:
+            - MONGO_INITDB_ROOT_USERNAME=ads
+            - MONGO_INITDB_ROOT_PASSWORD=ads
+        restart: always
+        volumes:
+            - mongo-db:/data/hespo
+volumes:
+    mongo-db:
+
