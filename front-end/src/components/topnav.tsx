@@ -8,6 +8,7 @@ const TopNavBar = ({isLoggedIn}: ISLog) => {
   } else {
     return (
       <>
+      
         <div className="topnav"> 
               <div className="header"> <HomeIcon >Filled</HomeIcon ></div>
               <div className="header"> <HomeIcon >Filled</HomeIcon > <NavLink to="/">Home1</NavLink></div>

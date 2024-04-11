@@ -39,9 +39,10 @@ const App = () => {
               <Route element={<ProtectedRoute condition={!isLoggedIn}  redirectTo='/dashboard' />}>
                   <Route path="/login" element={<Login  setLogins = {setLogins} />} />
                   <Route path="/signup" element={<SignUp />} />
+                  <Route path="/dashboard" element={<DashBoard />} />
                </Route>
                <Route element={<ProtectedRoute condition={isLoggedIn} redirectTo='/login' />}>
-                  <Route path="/dashboard" element={<DashBoard />} />
+                  {/* <Route path="/dashboard" element={<DashBoard />} /> */}
                   <Route path="/" element={<DashBoard />} />
                </Route>
               <Route path="*" element={(()=>{return (<>NO MATCH</>)})()} />
